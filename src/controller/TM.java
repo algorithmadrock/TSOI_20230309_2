@@ -9,11 +9,11 @@ package controller;
 public class TM extends Thread {
 
 	private int l;
-	private int[][] m;
+	private int[] v;
 
-	public TM(int linha, int[][] matriz) {
+	public TM(int linha, int[] vatriz) {
 		this.l = linha;
-		this.m = matriz;
+		this.v = vatriz;
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class TM extends Thread {
 		int soma = 0;
 		for (int i = 0; i < 5; i++) {
 //			pego só a linha da matriz
-			soma += m[l][i];
+			soma += v[i];
 		}
 		return soma;
 	}

@@ -20,7 +20,7 @@ public class Principal {
 		}
 		
 		for(int i = 0; i< 3; i++) {
-			Thread thread = new TM(i, matriz);
+			Thread thread = new TM(i, matriz[i]);
 			thread.start();
 		}
 		
